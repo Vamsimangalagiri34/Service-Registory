@@ -4,6 +4,7 @@ package com.userservice.UserService.Service;
 import com.userservice.UserService.CustomException.UserNotFoundException;
 import com.userservice.UserService.Interfaces.UserServiceInter;
 import com.userservice.UserService.Model.LoginObject;
+import com.userservice.UserService.Model.OrderObject;
 import com.userservice.UserService.Model.User;
 import com.userservice.UserService.Repository.UserRepo;
 import lombok.extern.slf4j.Slf4j;
@@ -23,6 +24,7 @@ public class UserServiceImp implements UserServiceInter {
 
     @Override
     public User createUser(User user) {
+
       return  userRepo.save(user);
 
     }
@@ -41,8 +43,12 @@ public class UserServiceImp implements UserServiceInter {
 
         return false;
     }
-    public List<User> getUsers(){
-         return  userRepo.findAll();
+
+    @Override
+    public List<OrderObject> userOrders(Long userId) {
+        return null;
     }
+
+
 
 }

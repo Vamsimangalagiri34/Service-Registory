@@ -42,10 +42,10 @@ public class MainController {
          return userServiceImp.validateUser(loginObject)?ResponseEntity.ok("valid user"):ResponseEntity.badRequest().body("Not a valid user");
     }
 
-    @GetMapping(value = "/all", produces = "application/json")
-    public ResponseEntity<?> getUsers() {
-        return ResponseEntity.ok(userServiceImp.getUsers());
-    }
+//    @GetMapping(value = "/all", produces = "application/json")
+//    public ResponseEntity<?> getUsers() {
+//        return ResponseEntity.ok(userServiceImp.getUsers());
+//    }
 
     @GetMapping("/myOrders")
     public  ResponseEntity<?> getOrders(){
